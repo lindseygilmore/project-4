@@ -3,11 +3,13 @@
     <ion-title>
       Restaurant Decider
     </ion-title>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-<div id="questionZero" ng-if="currentQuestion=0">
+<div class="questionZero" ng-show="inprogress"></div>
     <h1>Cuisine?</h1>
     <p><input type="checkbox"> Sushi</p>
  
@@ -16,9 +18,12 @@
     <p><input type="checkbox"> Tacos</p>
    
     <p><input type="checkbox"> Pizza</p>
-  </div>
 
-  <div id="questionOne" ng-if="currentQuestion=1">
+  <div class="intro" ng-show="!inProgress"></div>
+
+
+
+ <!--  <div id="questionOne" ng-if="currentQuestion=1">
     <h1>Location?</h1>
     <p><input type="checkbox"> River North</p>
  
@@ -38,5 +43,5 @@
     <p><input type="checkbox"> $$$</p>
    
     <p><input type="checkbox"> $$$$</p>
-  </div>
+  </div> -->
 </ion-content>

@@ -9,8 +9,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController) {
 
-  }
-
+	
+}
    //  	onSearch(){
   	// 	console.log('clicked');
   	// 	let apiKey = '00205583460d0e51c5b2bdc03f62a7c7';
