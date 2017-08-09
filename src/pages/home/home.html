@@ -1,14 +1,42 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Restaurant Decider
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<div id="questionZero" ng-if="currentQuestion=0">
+    <h1>Cuisine?</h1>
+    <p><input type="checkbox"> Sushi</p>
+ 
+    <p><input type="checkbox"> Burgers</p>
+    
+    <p><input type="checkbox"> Tacos</p>
+   
+    <p><input type="checkbox"> Pizza</p>
+  </div>
+
+  <div id="questionOne" ng-if="currentQuestion=1">
+    <h1>Location?</h1>
+    <p><input type="checkbox"> River North</p>
+ 
+    <p><input type="checkbox"> Old Town</p>
+    
+    <p><input type="checkbox"> Wicker Park</p>
+   
+    <p><input type="checkbox"> Loop</p>
+  </div>
+
+   <div id="questionTwo" ng-if="currentQuestion=2">
+    <h1>Budget?</h1>
+    <p><input type="checkbox"> $</p>
+ 
+    <p><input type="checkbox"> $$</p>
+    
+    <p><input type="checkbox"> $$$</p>
+   
+    <p><input type="checkbox"> $$$$</p>
+  </div>
 </ion-content>
