@@ -7,22 +7,25 @@
 </ion-header>
 
 <ion-content padding>
-	<div ng-if="questionOne">
+
+
+
+	<div id="questionOne" ng-if="showQuestionOne">
 		<h1>Cuisine?</h1>
     		<p><input type="checkbox"> Sushi</p>
  
-    		<p><input type="checkbox"> Burgers</p>
-    
     		<p><input type="checkbox"> Tacos</p>
-   
+    
     		<p><input type="checkbox"> Pizza</p>
+   
+    		<p><input type="checkbox"> Burgers</p>
 
-    		<button (click)="goToQuestionTwo()">Next Question</button>
+    		<button (click)="goToQuestionTwo()">Submit</button>
 	</div>
 
 <br>
     
-    <div ng-if="questionTwo">
+    <div id="questionTwo" ng-if="showQuestionTwo">
 		<h1>Location?</h1>
     		<p><input type="checkbox"> River North</p>
  
@@ -32,12 +35,12 @@
    
     		<p><input type="checkbox"> Loop</p>
 
-    		<button (click)="goToQuestionThree()">Next Question</button>
+    		<button (click)="goToQuestionThree()">Submit</button>
 	</div>
 
 <br>
 
-	<div ng-show="questionThree">
+	<div ng-hide="showQuestionThree" ng-show="!showQuestionThree">
 		<h1>Budget?</h1>
     		<p><input type="checkbox"> $</p>
  
@@ -47,7 +50,7 @@
    
     		<p><input type="checkbox"> $$$$</p>
 
-    		<button (click)="generateRestaurants()">Find Restaurants</button>
+    		<button (click)="getRestaurants()">Find Restaurants</button>
 	</div>
 
 </ion-content>
