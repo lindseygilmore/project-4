@@ -26,12 +26,7 @@ export class HomePage {
 
 	}
 
-		getRestaurants(){
-			console.log(this.answers)
-			this.showQuestionOne = false;
-			this.showQuestionTwo = false;
-			this.answers.push();
-		}
+		
 
 		goToQuestionTwo() {
 			console.log(this.answers)
@@ -44,6 +39,13 @@ export class HomePage {
 			console.log(this.answers)
 		    this.showQuestionTwo = false;
 		    this.showQuestionThree = true;
+		}
+
+		getRestaurants(){
+			console.log(this.answers)
+			this.showQuestionOne = false;
+			this.showQuestionTwo = false;
+			this.answers.push();
 		}
 
 		myAlert = () => {

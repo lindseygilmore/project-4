@@ -41,16 +41,18 @@
 
 	<div id="questionThree" *ngIf="showQuestionThree">
 		<h1>Budget?</h1>
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="$"> $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="one dollar"> $</p>
  
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="$$"> $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="two dollars"> $ $</p>
     
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="$$$"> $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="three dollars"> $ $ $</p>
    
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="$$$$"> $ $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="four dollars"> $ $ $ $</p>
 
     		<button id='finalButton'(click)="getRestaurants()">Find Restaurants</button>
 	</div>
+
+
 
 
 </ion-content>
