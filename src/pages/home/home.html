@@ -9,48 +9,48 @@
 <ion-content padding>
 
 
-
-	<div id="questionOne" ng-if="showQuestionOne">
+	<div id="questionOne" *ngIf="showQuestionOne">
 		<h1>Cuisine?</h1>
-    		<p><input type="checkbox"> Sushi</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="sushi"> Sushi</p>
  
-    		<p><input type="checkbox"> Tacos</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="tacos"> Tacos</p>
     
-    		<p><input type="checkbox"> Pizza</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="pizza"> Pizza</p>
    
-    		<p><input type="checkbox"> Burgers</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="burgers"> Burgers</p>
 
     		<button (click)="goToQuestionTwo()">Submit</button>
 	</div>
 
 <br>
     
-    <div id="questionTwo" ng-if="showQuestionTwo">
+    <div id="questionTwo" *ngIf="showQuestionTwo">
 		<h1>Location?</h1>
-    		<p><input type="checkbox"> River North</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="river north"> River North</p>
  
-    		<p><input type="checkbox"> Old Town</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="old town"> Old Town</p>
     
-    		<p><input type="checkbox"> Wicker Park</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="wicker park"> Wicker Park</p>
    
-    		<p><input type="checkbox"> Loop</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="loop"> Loop</p>
 
     		<button (click)="goToQuestionThree()">Submit</button>
 	</div>
 
 <br>
 
-	<div ng-hide="showQuestionThree" ng-show="!showQuestionThree">
+	<div id="questionThree" *ngIf="showQuestionThree">
 		<h1>Budget?</h1>
-    		<p><input type="checkbox"> $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="$"> $</p>
  
-    		<p><input type="checkbox"> $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="$$"> $ $</p>
     
-    		<p><input type="checkbox"> $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="$$$"> $ $ $</p>
    
-    		<p><input type="checkbox"> $ $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="$$$$"> $ $ $ $</p>
 
-    		<button (click)="getRestaurants()">Find Restaurants</button>
+    		<button id='finalButton'(click)="getRestaurants()">Find Restaurants</button>
 	</div>
+
 
 </ion-content>

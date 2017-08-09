@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 
-class Restaurant{
-	name: string;
-	address: string;
-	phone: string;
-	price: string;
+class answers{
+	cuisine: string;
+	location: string;
+	budget: string;
 }
 
 @Component({
@@ -15,23 +14,8 @@ class Restaurant{
 })
 
 export class HomePage {
-	answers: {};
+	answers = [];
 
-	// questions: {
-	// 	question: "Which location do you want to eat?",
-	// 	options: ["Loop", "River North", "Old Town", "Wicker Park"],
-	// 	answer: ""
-	// },
-	// {
-	// 	question: "What type of cuisine do you want to eat?",
-	// 	options: ["Sushi", "Burgers", "Tacos", "Pizza"],
-	// 	answer: ""
-	// },
-	// {
-	// 	question: "What type of cuisine do you want to eat?",
-	// 	options: ["Sushi", "Burgers", "Tacos", "Pizza"],
-	// 	answer: ""
-	// },
 	showQuestionOne: boolean = true;
 	showQuestionTwo: boolean = false;
 	showQuestionThree: boolean = false;
@@ -40,49 +24,34 @@ export class HomePage {
   constructor(public navCtrl: NavController, private http: Http) {
   		
 
-
 	}
 
+		getRestaurants(){
+			console.log(this.answers)
+			this.showQuestionOne = false;
+			this.showQuestionTwo = false;
+			this.answers.push();
+		}
 
 		goToQuestionTwo() {
-		    let x = document.getElementById('questionOne')
-
-		    if (x.style.display === 'none') {
-		        x.style.display = 'block'
-		    } else {
-		        x.style.display = 'none'
-		    }
+			console.log(this.answers)
+			this.showQuestionOne = false;
+		    this.showQuestionTwo = true;
+		    this.answers.push();
 		}
 
 		goToQuestionThree() {
-		    let x = document.getElementById('questionTwo')
-
-		    if (x.style.display === 'none') {
-		        x.style.display = 'block'
-		    } else {
-		        x.style.display = 'none'
-		    }
+			console.log(this.answers)
+		    this.showQuestionTwo = false;
+		    this.showQuestionThree = true;
 		}
 
-		// getRestaurants(){
-		// 	this.get
-		// }
+		myAlert = () => {
+			debugger;
+			console.log(this.answers)
+		}
 
 
-		// goToQuestionTwo(){
-		// 	this.showQuestionTwo = true;
-		// 	console.log("clicked");
-		// }
-
-		// goToQuestionThree(){
-		// 	this.showQuestionOne = false;
-		// 	this.showQuestionTwo = false;
-		// 	this.showQuestionThree = true;
-		// }
-
-		// getRestaurants(){
-
-		// }
 
 
 	
