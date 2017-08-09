@@ -13,8 +13,10 @@ class Restaurant{
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
 	answers: {};
+
 	// questions: {
 	// 	question: "Which location do you want to eat?",
 	// 	options: ["Loop", "River North", "Old Town", "Wicker Park"],
@@ -41,6 +43,7 @@ export class HomePage {
 
 	}
 
+
 		goToQuestionTwo() {
 		    let x = document.getElementById('questionOne')
 
@@ -60,6 +63,10 @@ export class HomePage {
 		        x.style.display = 'none'
 		    }
 		}
+
+		// getRestaurants(){
+		// 	this.get
+		// }
 
 
 		// goToQuestionTwo(){
