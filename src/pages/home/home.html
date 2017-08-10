@@ -11,13 +11,13 @@
 
 	<div id="questionOne" *ngIf="showQuestionOne">
 		<h1>Cuisine?</h1>
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="sushi"> Sushi</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Sushi"> Sushi</p>
  
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="tacos"> Tacos</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Tacos"> Tacos</p>
     
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="pizza"> Pizza</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Pizza"> Pizza</p>
    
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="burgers"> Burgers</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Burgers"> Burgers</p>
 
     		<button (click)="goToQuestionTwo()">Submit</button>
 	</div>
@@ -26,13 +26,13 @@
     
     <div id="questionTwo" *ngIf="showQuestionTwo">
 		<h1>Location?</h1>
-    		<p><input type="radio" [(ngModel)]="answers.location" value="river north"> River North</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="River North"> River North</p>
  
-    		<p><input type="radio" [(ngModel)]="answers.location" value="old town"> Old Town</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="Old Town"> Old Town</p>
     
-    		<p><input type="radio" [(ngModel)]="answers.location" value="wicker park"> Wicker Park</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="Wicker Park"> Wicker Park</p>
    
-    		<p><input type="radio" [(ngModel)]="answers.location" value="loop"> Loop</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="Loop"> Loop</p>
 
     		<button (click)="goToQuestionThree()">Submit</button>
 	</div>
@@ -41,15 +41,36 @@
 
 	<div id="questionThree" *ngIf="showQuestionThree">
 		<h1>Budget?</h1>
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="one dollar"> $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="One dollar"> $</p>
  
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="two dollars"> $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="Two dollars"> $ $</p>
     
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="three dollars"> $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="Three dollars"> $ $ $</p>
    
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="four dollars"> $ $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="Four dollars"> $ $ $ $</p>
 
-    		<button id='finalButton'(click)="getRestaurants()">Find Restaurants</button>
+    		<button id='finalButton'(click)="getRestaurants()">Submit</button>
+<!-- <ion-card-content>
+    		<button [navPush]="quizPage">Find</button>
+</ion-card-content> -->
+	</div>
+
+
+	<div id="showRestaurants" *ngIf="showRestaurants">
+		<h2>Search Criteria</h2>
+    		<ul>
+    		<li>Location: {{this.answers.location}}</li>
+    		<li>Cuisine: {{this.answers.cuisine}}</li>
+    		<li>Budget: {{this.answers.budget}}</li>
+    		</ul>
+
+    		<h2>Your Options</h2>
+    		<ul>
+    		<li></li>
+    		<li></li>
+    		</ul>
+
+    		<button (click)="">More</button>
 	</div>
 
 

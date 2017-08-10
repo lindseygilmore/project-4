@@ -19,6 +19,7 @@ export class HomePage {
 	showQuestionOne: boolean = true;
 	showQuestionTwo: boolean = false;
 	showQuestionThree: boolean = false;
+	showRestaurants: boolean = false;
 
 
   constructor(public navCtrl: NavController, private http: Http) {
@@ -45,6 +46,8 @@ export class HomePage {
 			console.log(this.answers)
 			this.showQuestionOne = false;
 			this.showQuestionTwo = false;
+			this.showQuestionThree = false;
+			this.showRestaurants = true;
 			this.answers.push();
 		}
 
