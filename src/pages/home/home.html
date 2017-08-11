@@ -10,10 +10,10 @@
 
 
 	<div id="questionOne" *ngIf="showQuestionOne">
-		<h1>Cuisine?</h1>
+		<h1>What kind of cuisine are we feelin'?</h1>
     		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Sushi"> Sushi</p>
  
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Tacos"> Tacos</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Mexican"> Mexican</p>
     
     		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Pizza"> Pizza</p>
    
@@ -21,11 +21,9 @@
 
     		<button (click)="goToQuestionTwo()">Submit</button>
 	</div>
-
-<br>
     
     <div id="questionTwo" *ngIf="showQuestionTwo">
-		<h1>Location?</h1>
+		<h1>Where are we trying to eat?</h1>
     		<p><input type="radio" [(ngModel)]="answers.location" value="River North"> River North</p>
  
     		<p><input type="radio" [(ngModel)]="answers.location" value="Old Town"> Old Town</p>
@@ -37,26 +35,24 @@
     		<button (click)="goToQuestionThree()">Submit</button>
 	</div>
 
-<br>
-
 	<div id="questionThree" *ngIf="showQuestionThree">
-		<h1>Budget?</h1>
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="One dollar"> $</p>
+		<h1>How's the budget looking?</h1>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="1"> $</p>
  
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="Two dollars"> $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="2"> $ $</p>
     
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="Three dollars"> $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="3"> $ $ $</p>
    
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="Four dollars"> $ $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.budget" value="4"> $ $ $ $</p>
 
-    		<button id='finalButton'(click)="getRestaurants()">Submit</button>
+    		<button (click)="goToFinal()">Submit</button>
 <!-- <ion-card-content>
     		<button [navPush]="quizPage">Find</button>
 </ion-card-content> -->
 	</div>
 
 
-	<div id="showRestaurants" *ngIf="showRestaurants">
+	<div id="showSearchCriteria" *ngIf="showSearchCriteria">
 		<h2>Search Criteria</h2>
     		<ul>
     		<li>Location: {{this.answers.location}}</li>
@@ -64,13 +60,17 @@
     		<li>Budget: {{this.answers.budget}}</li>
     		</ul>
 
-    		<h2>Your Options</h2>
-    		<ul>
-    		<li></li>
-    		<li></li>
-    		</ul>
+    		<button id='restaurantGenerate' (click)="getRestaurants()">Let's eat</button>
 
-    		<button (click)="">More</button>
+	</div>
+
+	<div id="showRestaurants" *ngIf="showRestaurants">
+		<h2>Boom.</h2>
+			<ul>
+			<li></li>
+			<li></li>
+			</ul>
+			<button>More</button>
 	</div>
 
 
