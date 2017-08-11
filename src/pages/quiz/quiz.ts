@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Http } from '@angular/http';
+
 
 
 @Component({
@@ -12,7 +12,7 @@ export class QuizPage {
 	
 
 
-  constructor(public navCtrl: NavController, private http: Http) {
+  constructor(public navCtrl: NavController) {
   		
 
 	}

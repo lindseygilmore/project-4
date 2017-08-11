@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Http } from '@angular/http';
 
-class answers{
-	cuisine: string;
-	location: string;
-	budget: string;
-}
 
 @Component({
   selector: 'page-home',
@@ -23,7 +17,7 @@ export class HomePage {
 	showRestaurants: boolean = false;
 
 
-  constructor(public navCtrl: NavController, private http: Http) {
+  constructor(public navCtrl: NavController) {
   		
 
 	}
@@ -61,11 +55,18 @@ export class HomePage {
 			this.showSearchCriteria = false;
 			this.showRestaurants = true;
 
-			let apiKey = '00205583460d0e51c5b2bdc03f62a7c7';
-  			this.http.get('http://food2fork.com/api/search?key=' + apiKey + '&q=').subscribe(response => {
-  			console.log(response.json());
 
-		});
+		};
 	
 
-}}
+	}
+
+
+
+
+
+
+
+
+
+
