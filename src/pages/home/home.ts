@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'page-home',
@@ -17,7 +17,7 @@ export class HomePage {
 	showRestaurants: boolean = false;
 
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private http: Http) {
   		
 
 	}
@@ -55,12 +55,14 @@ export class HomePage {
 			this.showSearchCriteria = false;
 			this.showRestaurants = true;
 
+			this.http.get('http://localhost:3000/eat').subscribe(response => {
+				console.log(response.json())
+			})
 
-		};
 	
 
 	}
-
+}
 
 
 
