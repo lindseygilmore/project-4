@@ -57,7 +57,10 @@ export class HomePage {
 
 			this.http.get('http://localhost:3000/eat').subscribe(response => {
 				console.log(response.json())
-			})
+	
+			});
+
+
 
 	
 

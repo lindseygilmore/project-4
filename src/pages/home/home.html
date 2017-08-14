@@ -1,13 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Restaurant Decider
+      F R E S H
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
+<div id="container">
 
 	<div id="questionOne" *ngIf="showQuestionOne">
 		<h1>What kind of cuisine are we feelin'?</h1>
@@ -55,25 +56,25 @@
 	<div id="showSearchCriteria" *ngIf="showSearchCriteria">
 		<h2>Search Criteria</h2>
     		<ul>
-    		<li>Location: {{this.answers.location}}</li>
-    		<li>Cuisine: {{this.answers.cuisine}}</li>
-    		<li>Budget: {{this.answers.budget}}</li>
+    		<li>Location:   {{this.answers.location}}</li>
+    		<li>Cuisine:   {{this.answers.cuisine}}</li>
+    		<li>Budget:   Level {{this.answers.budget}}</li>
     		</ul>
 
-    		<button id='restaurantGenerate' (click)="getRestaurants()">Let's eat</button>
+    		<button id='restaurantGenerate' (click)="getRestaurants()">Let's eat!</button>
 
 	</div>
 
 	<div id="showRestaurants" *ngIf="showRestaurants">
-		<h2>Boom.</h2>
+		<h2>Check it out.</h2>
 			<ul>
-			<li></li>
-			<li></li>
+			<li>{{image_url}}</li>
+			<li>{{name}}</li>
 			</ul>
 			<button>More</button>
 	</div>
 
-
+</div>
 
 
 </ion-content>
