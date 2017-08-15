@@ -12,8 +12,8 @@ import { Http, Response } from '@angular/http';
 export class HomePage {
 	answers = [];
 
-	// showIntro: boolean = true;
-	showQuestionOne: boolean = true;
+	showIntro: boolean = true;
+	showQuestionOne: boolean = false;
 	showQuestionTwo: boolean = false;
 	showQuestionThree: boolean = false;
 	showSearchCriteria: boolean = false;
@@ -32,10 +32,10 @@ export class HomePage {
 
 	}
 
-		// goToQuestionOne() {
-		// 	this.showIntro = false;
-		// 	this.showQuestionOne = true;
-		// }
+		goToQuestionOne() {
+			this.showIntro = false;
+			this.showQuestionOne = true;
+		}
 
 		goToQuestionTwo() {
 			console.log(this.answers)

@@ -19,31 +19,31 @@
 
 
 	<div id="questionOne" *ngIf="showQuestionOne">
-		<h1>What kind of cuisine are you feelin'?</h1>
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Sushi"> Sushi</p>
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Mexican"> Mexican</p>
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Pizza"> Pizza</p>
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Burgers"> Burgers</p>
+    	<h1>What city are you trying to eat in?</h1>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="San Francisco"> San Francisco</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="Chicago"> Chicago</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="Minneapolis"> Minneapolis</p>
+    		<p><input type="radio" [(ngModel)]="answers.location" value="Dallas"> Dallas</p>
     	<button (click)="goToQuestionTwo()">Submit</button>
 	</div>
     
 
     <div id="questionTwo" *ngIf="showQuestionTwo">
-		<h1>What area are you trying to eat in?</h1>
-    		<p><input type="radio" [(ngModel)]="answers.location" value="River North"> River North</p>
-    		<p><input type="radio" [(ngModel)]="answers.location" value="West Loop"> West Loop</p>
-    		<p><input type="radio" [(ngModel)]="answers.location" value="Wicker Park"> Wicker Park</p>
-    		<p><input type="radio" [(ngModel)]="answers.location" value="Loop"> Loop</p>
+		<h1>What kind of cuisine are you feelin'?</h1>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Sushi"> Sushi</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Mexican"> Mexican</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Pizza"> Pizza</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Burgers"> Burgers</p>
     	<button (click)="goToQuestionThree()">Submit</button>
 	</div>
 
 
 	<div id="questionThree" *ngIf="showQuestionThree">
 		<h1>How's the budget looking?</h1>
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="1"> $</p>
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="2"> $ $</p>
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="3"> $ $ $</p>
-    		<p><input type="radio" [(ngModel)]="answers.budget" value="4"> $ $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.price" value="1"> $</p>
+    		<p><input type="radio" [(ngModel)]="answers.price" value="2"> $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.price" value="3"> $ $ $</p>
+    		<p><input type="radio" [(ngModel)]="answers.price" value="4"> $ $ $ $</p>
     	<button (click)="goToFinal()">Submit</button>
 	</div>
 
@@ -53,7 +53,7 @@
     		<ul>
 	    		<li>Location:   {{this.answers.location}}</li>
 	    		<li>Cuisine:   {{this.answers.cuisine}}</li>
-	    		<li>Budget:   Level {{this.answers.budget}}</li>
+	    		<li>Price:   Level {{this.answers.price}}</li>
     		</ul>
 		<button id='restaurantGenerate' (click)="getRestaurants()">Let's eat!</button>
 	</div>
