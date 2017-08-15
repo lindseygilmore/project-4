@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Http, Response } from '@angular/http';
+import { Http } from '@angular/http';
 
+class Answer {
+	price: number;
+	location: string;
+	cuisine: string;
+}
 
 @Component({
   selector: 'page-home',
@@ -9,8 +14,9 @@ import { Http, Response } from '@angular/http';
 })
 
 
+
 export class HomePage {
-	answers = [];
+	answers: Answer = new Answer();
 
 	showIntro: boolean = true;
 	showQuestionOne: boolean = false;
@@ -41,7 +47,6 @@ export class HomePage {
 			console.log(this.answers)
 			this.showQuestionOne = false;
 		    this.showQuestionTwo = true;
-		    this.answers.push();
 		}
 
 		goToQuestionThree() {
@@ -56,11 +61,15 @@ export class HomePage {
 			this.showQuestionTwo = false;
 			this.showQuestionThree = false;
 			this.showSearchCriteria = true;
-			this.answers.push();
 
 		}
 
 		getRestaurants(){
+			var price = this.answers.price;
+			var cuisine = this.answers.cuisine;
+			var location = this.answers.location;
+
+
 			console.log(this.answers)
 			this.showQuestionOne = false;
 			this.showQuestionTwo = false;
@@ -68,8 +77,14 @@ export class HomePage {
 			this.showSearchCriteria = false;
 			this.showRestaurants = true;
 
-			this.http.get('http://localhost:3000/eat').subscribe(response => {
-				console.log(response.json())
+			this.http.get('http://localhost:3000/eat?price=' + price + "&cuisine=" + cuisine + "&location=" + location).subscribe(response => {
+				var restaurant = response;
+				console.log(response.json());
+
+				// var name = restaurant[0].name;
+				// console.log(restaurant[0].name);
+
+				console.log();
 
 			});
 

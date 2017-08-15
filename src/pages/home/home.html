@@ -30,10 +30,10 @@
 
     <div id="questionTwo" *ngIf="showQuestionTwo">
 		<h1>What kind of cuisine are you feelin'?</h1>
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Sushi"> Sushi</p>
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Mexican"> Mexican</p>
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Pizza"> Pizza</p>
-    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="Burgers"> Burgers</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="sushi"> Sushi</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="mexican"> Mexican</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="pizza"> Pizza</p>
+    		<p><input type="radio" [(ngModel)]="answers.cuisine" value="burgers"> Burgers</p>
     	<button (click)="goToQuestionThree()">Submit</button>
 	</div>
 
@@ -62,7 +62,7 @@
 	<div id="showRestaurants" *ngIf="showRestaurants">
 		<h2>Your  <span id="fresh">fresh</span> find</h2>
 			<ul>
-				<li>[Image] {{image_url}}</li>
+				<li>{{answers.location}}</li>
 				<li>[Name] {{name}}</li>
 				<li>[Address]</li>
 				<li>[Phone Number]</li>
